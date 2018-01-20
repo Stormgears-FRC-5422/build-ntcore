@@ -1,0 +1,22 @@
+Source: ntcore
+Priority: optional
+Maintainer: W. Mark Smith <wmsmith@gmail.com>
+Build-Depends: debhelper (>= 9), cmake
+Standards-Version: 3.9.5
+Section: libs
+Homepage: https://github.com/wpilibsuite/ntcore
+#Vcs-Git: git://anonscm.debian.org/collab-maint/ntcore.git
+#Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/ntcore.git;a=summary
+
+Package: ntcore-dev
+Section: libdevel
+Architecture: any
+Depends: ntcore (= ${binary:Version}), ${misc:Depends}
+Description: FRC Network Tables library dev
+ FIRST Robotics Network Tables library development package
+
+Package: ntcore
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: FRC Network Tables library
+ FIRST Robotics Network Tables library
