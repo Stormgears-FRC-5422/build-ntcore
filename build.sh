@@ -2,7 +2,7 @@
 
 PKG=ntcore
 PKGVER=3.1.7
-PKGREL=1
+PKGREL=2
 GITURL=https://github.com/wpilibsuite/ntcore
 
 WD=$(dirname $0)
