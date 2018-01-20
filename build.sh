@@ -25,9 +25,9 @@ cd $PKG
 git checkout v$PKGVER
 cp -r $WD/deb debian
 cat > debian/changelog <<EOF
-$PKG (${gitversion}-${gitrelease}) $codename; urgency=low
+$PKG (${PKGVER}-${PKGREL}) $codename; urgency=low
 
-  * ${gitlog}
+  * Automatically generated
 
  -- ${gitname} <${gitemail}>  ${gitdate}
 EOF
