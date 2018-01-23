@@ -2,7 +2,8 @@
 
 PKG=ntcore
 PKGVER=3.1.7
-PKGREL=4
+PKGVERSUB=1
+PKGREL=1
 GITURL=https://github.com/wpilibsuite/ntcore
 
 WD=$(dirname $0)
@@ -25,22 +26,22 @@ cd $PKG
 git checkout v$PKGVER
 cp -r $WD/deb debian
 cat > debian/changelog <<EOF
-$PKG (${PKGVER}-${PKGREL}.$dist) $codename; urgency=low
+$PKG (${PKGVER}.${PKGVERSUB}-${PKGREL}.$dist) $codename; urgency=low
 
   * Automatically generated
 
  -- ${gitname} <${gitemail}>  ${gitdate}
 EOF
 cd $WD/work
-mv $PKG ${PKG}-${PKGVER}
-tar czf ${PKG}_${PKGVER}.orig.tar.gz ${PKG}-${PKGVER}
+mv $PKG ${PKG}-${PKGVER}.${PKGVERSUB}
+tar czf ${PKG}_${PKGVER}.${PKGVERSUB}.orig.tar.gz ${PKG}-${PKGVER}.${PKGVERSUB}
 
 cat <<EOF
 Source files are prepared. You have two options:
 (1) Build deb package:
-  cd $WD/work/${PKG}-${PKGVER} && dpkg-buildpackage -us -uc -b
+  cd $WD/work/${PKG}-${PKGVER}.${PKGVERSUB} && dpkg-buildpackage -us -uc -b
 (2) Prepare upload for PPA:
-  cd $WD/work/${PKG}-${PKGVER} && dpkg-buildpackage -S
+  cd $WD/work/${PKG}-${PKGVER}.${PKGVERSUB} && dpkg-buildpackage -S
 EOF
 
 cd $WD

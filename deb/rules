@@ -29,6 +29,5 @@ include /usr/share/dpkg/default.mk
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
-	-DCMAKE_INSTALL_PREFIX=/usr \
-	-DWITHOUT_JAVA=1
+	-DCMAKE_INSTALL_PREFIX=/usr
 

@@ -1,7 +1,7 @@
 Source: ntcore
 Priority: optional
 Maintainer: W. Mark Smith <wmsmith@gmail.com>
-Build-Depends: debhelper (>= 9), cmake
+Build-Depends: debhelper (>= 9), cmake, stormgears-jdk
 Standards-Version: 3.9.5
 Section: libs
 Homepage: https://github.com/wpilibsuite/ntcore
@@ -17,6 +17,6 @@ Description: FRC Network Tables library dev
 
 Package: ntcore
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, stormgears-jdk
 Description: FRC Network Tables library
  FIRST Robotics Network Tables library
