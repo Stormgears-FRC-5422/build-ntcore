@@ -2,7 +2,7 @@
 
 PKG=ntcore
 PKGVER=3.1.7
-PKGVERSUB=1
+PKGVERSUB=3
 PKGREL=1
 GITURL=https://github.com/wpilibsuite/ntcore
 
@@ -26,7 +26,7 @@ cd $PKG
 git checkout v$PKGVER
 cp -r $WD/deb debian
 cat > debian/changelog <<EOF
-$PKG (${PKGVER}.${PKGVERSUB}-${PKGREL}.$dist) $codename; urgency=low
+$PKG (${PKGVER}.${PKGVERSUB}-${PKGREL}.$dist) $codename; urgency=medium
 
   * Automatically generated
 
